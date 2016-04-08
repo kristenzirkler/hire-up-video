@@ -1,17 +1,23 @@
 .button {
-  padding: 1em 1.5em;
-  color: #fff;
+  font-size: 18px;
   display: inline-block;
-  background: $main-color;
-  font-family: $accent-font;
-  text-transform: uppercase;
-
-  display: block;
-  text-align: center;
+  position: relative;
+  padding-right: 30px;
 
   @include transition(all .3s);
+  &:after {
+    content: '\00bb';
+    font-size: 40px;
+    position: absolute;
+    display: block;
+    top: -14px;
+    right: 5px;
+  }
   &:hover {
-    color: #fff;
-    background: darken($main-color,10);
+    //move the arrow
+  }
+  &.center {
+    display: block;
+    margin: 0 auto;
   }
 }

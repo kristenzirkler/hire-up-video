@@ -1,31 +1,41 @@
-$nav-height: 60px;
+$nav-height: 85px;
 $footer-height: 50px;
 
 body {
-	margin-top: $nav-height;
+	padding-top: $nav-height;
+	position: relative;
 }
 
 .site-navigation {
 	@include transition(all 1s);
-	background: #fff;
-	box-shadow: 0 0 10px rgba(#000,.3);
+	background: $gray-darker;
 
-	position: fixed;
+	position: absolute;
 	top: 0; left: 0; right: 0;
 	z-index: 100;
-	a {
-		color: $main-color;
+	.nav a {
+		color: $white;
+		font-weight: bold;
+		text-transform: uppercase;
+		border-bottom: 4px solid transparent;
+		font-size: 14px;
+		letter-spacing: 1px;
+		&:hover {
+			color: $white;
+			border-bottom-color: $white;
+		}
 	}
 	.logo {
 		display: inline-block;
 		float: left;
-		margin: 8px 10px 0;
-		//line-height: $nav-height;
-		//font-family: $accent-font;
-		//text-transform: uppercase;
-		//font-size: 1.5em;
-		img {
-			width: 200px;
+		margin: 13px 10px 0;
+		background-size: 130px 114px;
+		width: 130px;
+		height: 57px;
+		background-position: 0 -57px;
+		span {
+			display: block;
+			text-indent: -5000px;
 		}
 	}
 	.mobile-toggle {

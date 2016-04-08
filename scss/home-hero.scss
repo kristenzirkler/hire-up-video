@@ -1,0 +1,37 @@
+.home {
+	padding-top: 0;
+	.site-navigation {
+		background: none;
+	}
+}
+.home-hero {
+	background-color: $gray-darker;
+	height: 90vh;
+	min-height: 450px;
+	padding: 0 50px;
+	color: $white;
+	text-align: center;
+
+	display: table;
+    position: relative;
+    width: 100%;
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-clip: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	.inner {
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+		width: 100%;
+	}
+	.scroll {
+		position: absolute;
+		bottom: 0;
+		left: 0; right: 0;
+	}
+}
