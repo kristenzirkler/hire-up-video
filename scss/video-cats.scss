@@ -1,10 +1,39 @@
 .video-cats {
-	li {
-		float: left;
-		width: 33.33%;
-		padding: 10px;
+	a {
+		display: block;
+		margin: 10px;
 	}
 	img {
-		width: 150px;
+		//width: 150px;
+	}
+	&.list-only {
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		a {
+			position: relative;
+			background: $gray-darker;
+			border-radius: 50%;
+			width: 130px;
+			height: 130px;
+			overflow: hidden;
+			margin-left: auto;
+			margin-right: auto;
+			&:hover {
+				//span { @include transform(scale(1.2)); }
+			}
+		}
+		span {
+			@include transition(all .5s);
+			color: $white;
+			position: absolute;
+			display: block;
+			top: 50px;
+			padding: 0 15px;
+			line-height: 1.2em;
+		}
+		img {
+			opacity: .3;
+		}
 	}
 }

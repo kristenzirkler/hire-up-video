@@ -1,6 +1,6 @@
 $slide-top-padding-desktop: 80px;
-$slide-top-padding-mobile: 60px;
-$slide-side-padding: 10px;
+$slide-top-padding-mobile: 30px;
+$slide-side-padding: 20px;
 
 .divide {
 	height: 1px;
@@ -27,7 +27,7 @@ $slide-side-padding: 10px;
 		max-width: $page-size;
 		overflow: hidden;
 		margin: 0 auto;
-		padding: $slide-top-padding-desktop $slide-side-padding;
+		padding: $slide-top-padding-mobile $slide-side-padding;
 	}
 	img {
 		max-width: 100%;
@@ -65,4 +65,24 @@ $slide-side-padding: 10px;
 	.client-name {
 		color: $gray;
 	}
+}
+
+
+// Responsive
+@media all and (min-width: 420px) {
+// Tablet & Up
+
+.slide {
+	.inner {
+		padding: $slide-top-padding-desktop $slide-side-padding;
+	}
+}
+// End Tablet & Up
+}
+
+@media all and (min-width: 800px) {
+// Desktop & Up
+
+
+// End Desktop & Up
 }

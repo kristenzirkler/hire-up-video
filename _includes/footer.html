@@ -1,5 +1,22 @@
 <div class="footer">
-  <div class="inner">
-    <a class="logo" href="{{ site.baseurl }}/">&copy; {{ site.time | date: '%Y' }} Hire Up Video Production</a>
+  <div class="inner contact">
+  	<div class="row">
+	  	<div class="column md-two-thirds">
+	  		<p>We're here to help. Contact us to schedule an initial consultation to discuss a custom video solution.</p>
+	  	</div>
+	  	<div class="column md-one-third">
+		  	<a class="button ex-large">Contact Hire Up</a>
+		</div>
+	</div>
   </div>
+  <div class="inner footer-nav">
+    <a class="logo" href="{{ site.baseurl }}/" style="background-image: url({{ site.baseurl }}/img/logo.png);"><span>Hire Up Video Production</span></a>
+    <div class="phone">555.555.55555</div>
+
+    {% include nav-links.html %}
+
+  </div>
+  <!--div class="inner">
+    <div class="copyright">&copy; {{ site.time | date: '%Y' }} Hire Up Video Production</div>
+  </div-->
 </div>

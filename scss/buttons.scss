@@ -20,4 +20,12 @@
     display: block;
     margin: 0 auto;
   }
+  &.ex-large {
+    font-size: 44px;
+    &:after {
+      font-size: 60px;
+      top: -12px;
+      right: -3px;
+    }
+  }
 }

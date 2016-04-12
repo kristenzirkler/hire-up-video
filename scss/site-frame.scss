@@ -5,15 +5,10 @@ body {
 	padding-top: $nav-height;
 	position: relative;
 }
-
-.site-navigation {
-	@include transition(all 1s);
-	background: $gray-darker;
-
-	position: absolute;
-	top: 0; left: 0; right: 0;
-	z-index: 100;
-	.nav a {
+.nav {
+	display: block;
+	text-align: center;
+	a {
 		color: $white;
 		font-weight: bold;
 		text-transform: uppercase;
@@ -25,6 +20,14 @@ body {
 			border-bottom-color: $white;
 		}
 	}
+}
+.site-navigation {
+	@include transition(all 1s);
+	background: $gray-darker;
+
+	position: absolute;
+	top: 0; left: 0; right: 0;
+	z-index: 100;
 	.logo {
 		display: inline-block;
 		float: left;
@@ -40,53 +43,80 @@ body {
 	}
 	.mobile-toggle {
 		float: right;
-		border: 1px solid $main-color;
 		display: inline-block;
 		margin: 5px 10px;
 		border-radius: 50%;
-		width: $nav-height - 10;
-		height: $nav-height - 10;
+		width: $nav-height - 30;
+		height: $nav-height - 30;
 		text-align: center;
+		color: $white;
 		i {
 			padding: 0 .5em;
 			font-size: 1.3em;
-			line-height: $nav-height - 10;
+			line-height: $nav-height - 30;
 		}
 	}
 	ul {
-		display: block;
 		clear: both;
-		text-align: center;
 		display: none;
 		@include transition(all 1s);
 	}
 	li {
 		font-size: 1.1em;
-		font-family: $accent-font;
 		line-height: $nav-height;
 		border-top: 1px solid $gray-lightest;
 	}
 }
 .footer {
-	background: $main-color;
-	color: #fff;
+	background: $gray-darker;
+	color: $white;
 	overflow: hidden;
-
+	.inner {
+		padding: 30px;
+	}
 	a {
-		color: #fff;
+		color: $white;
 	}
 	.logo {
 		display: inline-block;
 		float: left;
+
+		margin: 0 10px 0 0;
+		background-size: 130px 114px;
+		width: 130px;
+		height: 57px;
+		background-position: 0 -57px;
+		span {
+			display: block;
+			text-indent: -5000px;
+		}
+	}
+	.contact {
+		border-bottom: 1px solid $white;
+		p {
+			font-size: 24px;
+			margin: 0;
+		}
+	}
+	.footer-nav {
+		padding: 30px;
+		overflow: hidden;
+	}
+	.phone {
+		font-size: 24px;
+		font-weight: bold;
 		margin: 0 20px;
-		line-height: $nav-height;
-		font-family: $accent-font;
-		text-transform: uppercase;
-		font-size: 1.5em;
+		float: left;
+		line-height: 60px;
+	}
+	.nav {
+		line-height: 60px;
+		li {
+			float: left;
+			margin-right: 20px;
+		}
 	}
 }
-
-
 
 .hide {
 	opacity: 0;
