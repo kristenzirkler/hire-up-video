@@ -3,8 +3,23 @@
 		display: block;
 		margin: 10px;
 	}
-	img {
-		//width: 150px;
+	&.with-desc {
+		text-align: center;
+		.title {
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 18px;
+			margin: 10px 0 5px;
+		}
+		.desc {
+			color: $font-color;
+			height: 100px;
+			line-height: 16px;
+			font-size: 14px;
+		}
+		span {
+			display: block;
+		}
 	}
 	&.list-only {
 		font-weight: bold;
@@ -13,7 +28,6 @@
 		a {
 			position: relative;
 			background: $gray-darker;
-			border-radius: 50%;
 			width: 130px;
 			height: 130px;
 			overflow: hidden;
