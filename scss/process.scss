@@ -1,0 +1,56 @@
+.process-list {
+	border-left: 3px dotted $gray-light;
+	position: relative;
+	margin-left: 35px;
+	border-top: 1px solid $gray-light;
+	.item {
+		padding: 0 0 0 40px;
+		border-bottom: 1px solid $gray-light;
+	}
+	em {
+		display: block;
+		border: 4px solid $main-color;
+		color: $main-color;
+		background: $white;
+		font-size: 30px;
+		font-weight: bold;
+		text-align: center;
+		width: 70px;
+		height: 70px;
+		line-height: 68px;
+		border-radius: 50%;
+		position: absolute;
+		margin-top: 20px;
+		left: -37px;
+	}
+	h2 {
+		padding-top: 40px;
+	}
+	p {
+		margin: 0;
+		line-height: 20px;
+	}
+	ul {
+		padding-top: 20px;
+		border-left: 2px solid $gray-light;
+	}
+	li {
+		font-size: 14px;
+		padding: 0 0 20px 20px;
+		position: relative;
+		&:before {
+			content: ' ';
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			border: 2px solid $main-color;
+			background: $white;
+			display: block;
+			position: absolute;
+			left: -8px;
+
+		}
+	}
+
+
+}

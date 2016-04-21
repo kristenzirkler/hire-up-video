@@ -1,4 +1,5 @@
-$nav-height: 85px;
+$nav-height: 40px;
+
 $footer-height: 50px;
 
 body {
@@ -12,39 +13,52 @@ body {
 		color: $white;
 		font-weight: bold;
 		text-transform: uppercase;
-		border-bottom: 4px solid transparent;
 		font-size: 14px;
+		line-height: $nav-height;
 		letter-spacing: 1px;
+		display: inline-block;
+		padding: 0 10px;
 		&:hover {
 			color: $white;
-			border-bottom-color: $white;
+			background: lighten($main-color,10);
 		}
 	}
 }
 .site-navigation {
 	@include transition(all 1s);
-	background: $gray-darker;
 
 	position: absolute;
 	top: 0; left: 0; right: 0;
 	z-index: 100;
+	.inner {
+		max-width: $page-size;
+		margin: 0 auto;
+	}
 	.logo {
 		display: inline-block;
 		float: left;
-		margin: 13px 10px 0;
+		margin: 13px $desktop-side-space 0;
 		background-size: 130px 114px;
 		width: 130px;
 		height: 57px;
-		background-position: 0 -57px;
+		background-position: 0 0;
 		span {
 			display: block;
 			text-indent: -5000px;
 		}
 	}
+	&.no-bg {
+		.logo {
+			background-position: 0 -57px;
+		}
+		ul {
+			background: none;
+		}
+	}
 	.mobile-toggle {
 		float: right;
 		display: inline-block;
-		margin: 5px 10px;
+		margin: 5px $desktop-side-space;
 		border-radius: 50%;
 		width: $nav-height - 30;
 		height: $nav-height - 30;
@@ -60,6 +74,7 @@ body {
 		clear: both;
 		display: none;
 		@include transition(all 1s);
+		background: $main-color;
 	}
 	li {
 		font-size: 1.1em;
@@ -81,7 +96,7 @@ body {
 		display: inline-block;
 		float: left;
 
-		margin: 0 10px 0 0;
+		margin: 0 $desktop-side-space 0 0;
 		background-size: 130px 114px;
 		width: 130px;
 		height: 57px;
@@ -122,10 +137,10 @@ body {
 	margin: 0 auto;
 	text-align: center;
 	h1 {
-		padding: 50px 0 0;
+		padding: 100px $desktop-side-space 0;
 	}
 	p {
-		padding: 0 0 50px 0;
+		padding: 0 $desktop-side-space 50px;
 		max-width: 500px;
 		margin: 0 auto;
 	}
@@ -156,14 +171,22 @@ body {
 		.nav {
 			display: inline-block;
 			clear: none;
+			position: relative;
 
 			float: right;
-			overflow: hidden;
 			line-height: $nav-height;
-			margin: 0 20px;
+			margin-top: 30px;
+			&:after {
+				content: ' .';
+				background: $main-color;
+				width: 3000px;
+				height: $nav-height+1px;
+				position: absolute;
+				top: 0; bottom: 0;
+				right: -3000px;
+			}
 			li {
 				display: inline-block;
-				margin: 0 .5em;
 				border-top: none;
 			}
 

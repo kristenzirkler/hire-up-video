@@ -12,6 +12,7 @@
 @import 'slides';
 @import 'video-cats';
 @import 'home-hero';
+@import 'process';
 
 * {
   -webkit-box-sizing: border-box;
@@ -41,20 +42,20 @@ p {
 }
 
 // Headers
-h1, h3, h4 {
+h1, h2, h3, h4 {
   font-weight: 700;
 }
 h1 {
   font-size: 44px;
   line-height: 1.2em;
-  text-transform: uppercase;
 }
 h2 {
-  font-size: 20px;
+  font-size: 30px;
   line-height: 1.4em;
+  color: $main-color;
 }
 h3 {
-  font-size: 30px;
+  font-size: 24px;
   line-height: 1.2em;
   color: $main-color;
 }
