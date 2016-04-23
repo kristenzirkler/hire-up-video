@@ -191,6 +191,12 @@ body {
 			}
 
 		}
+		
+		&.no-bg {
+			.nav:after {
+				display: none;
+			}
+		}
 	}
 
 // End Desktop & Up
