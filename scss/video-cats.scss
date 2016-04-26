@@ -1,7 +1,12 @@
 .video-cats {
 	a {
 		display: block;
-		margin: 10px;
+		margin: 5px;
+		border-radius: 3px;
+		overflow: hidden;
+	}
+	em {
+		font-style: normal;
 	}
 	&.with-desc {
 		text-align: center;
@@ -25,16 +30,21 @@
 		font-weight: bold;
 		text-transform: uppercase;
 		text-align: center;
+		.column {
+			padding: 0 5px;
+		}
+		em {
+			display: block;
+		}
 		a {
 			position: relative;
-			background: $gray-darker;
-			width: 130px;
-			height: 130px;
+			background-color: $gray-darker;
+			height: 120px;
 			overflow: hidden;
 			margin-left: auto;
 			margin-right: auto;
 			&:hover {
-				//span { @include transform(scale(1.2)); }
+				background-color: $main-color;
 			}
 		}
 		span {
@@ -42,12 +52,16 @@
 			color: $white;
 			position: absolute;
 			display: block;
-			top: 50px;
+			top: 45px;
+			left: 0;
+			right: 0;
 			padding: 0 15px;
 			line-height: 1.2em;
 		}
 		img {
 			opacity: .3;
+			max-width: 2000px;
+			height: 120px;
 		}
 	}
 }

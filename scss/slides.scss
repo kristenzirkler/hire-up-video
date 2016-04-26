@@ -43,23 +43,25 @@ $slide-side-padding: 20px;
 }
 .quote {
 	.copy {
-		font-size: 24px;
+		font-size: 30px;
 		position: relative;
 		&:before, &:after {
 			display: block;
 			position: absolute;
-			top: 0;
-			font-size: 48px;
-			color: $main-color;
-			font-family: 'Times New Roman';
+			font-size: 500px;
+			color: $gray-lightest;
+			font-family: Arial, 'Lucida Grande', sans-serif;
+			z-index: -1;
 		}
 		&:before {
 			content: '\201C';
-			left: -30px;
+			left: 40px;
+			top: 150px;
 		}
 		&:after {
 			content: '\201D';
-			right: -30px;
+			right: 40px;
+			top: 200px;
 		}
 	}
 	.client-name {
