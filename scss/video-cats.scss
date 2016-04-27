@@ -10,6 +10,16 @@
 	}
 	&.with-desc {
 		text-align: center;
+		.column {
+			padding: 0 10px;
+		}
+		a {
+			border: 1px solid $gray-light;
+			margin-bottom: 30px;
+			&:hover {
+				border-color: $main-color;
+			}	
+		}
 		.title {
 			text-transform: uppercase;
 			font-weight: bold;
@@ -18,12 +28,13 @@
 		}
 		.desc {
 			color: $font-color;
-			height: 100px;
+			min-height: 60px;
 			line-height: 16px;
 			font-size: 14px;
 		}
 		span {
 			display: block;
+			padding: 0 20px;
 		}
 	}
 	&.list-only {
