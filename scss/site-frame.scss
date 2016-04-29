@@ -79,7 +79,10 @@ body {
 	li {
 		font-size: 1.1em;
 		line-height: $nav-height;
-		border-top: 1px solid $gray-lightest;
+		float: left;
+	}
+	a {
+		float: left;
 	}
 }
 .footer {
@@ -146,6 +149,17 @@ body {
 	}
 
 }
+.watermark {
+	opacity: .7;
+	background-size: 500px 500px;
+	z-index: -1;
+	position: fixed;
+	top: 50%; left: 50%;
+	margin-top: -250px;
+	margin-left: -250px;
+	width: 500px;
+	height: 500px;
+}
 
 .hide {
 	opacity: 0;
@@ -175,19 +189,19 @@ body {
 
 			float: right;
 			line-height: $nav-height;
+			height: $nav-height;
 			margin-top: 30px;
 			&:after {
 				content: ' .';
 				background: $main-color;
 				width: 3000px;
-				height: $nav-height+1px;
+				height: $nav-height;
 				position: absolute;
 				top: 0; bottom: 0;
 				right: -3000px;
 			}
 			li {
 				display: inline-block;
-				border-top: none;
 			}
 
 		}
