@@ -1,0 +1,40 @@
+.testimonial {
+	padding: 40px 0;
+	h2 {
+		span {
+			font-size: 12px;
+			font-weight: normal;
+			color: $font-color;
+		}
+	}
+	.desc {
+		margin-bottom: 15px;
+	}
+	.copy {
+		position: relative;
+		text-align: center;
+		padding: 0 40px;
+		&:before, &:after {
+			display: block;
+			position: absolute;
+			font-size: 80px;
+			color: $main-color;
+			font-family: Arial, 'Lucida Grande', sans-serif;
+			z-index: 1;
+		}
+		&:before {
+			content: '\201C';
+			left: 0;
+			top: 22px;
+		}
+		&:after {
+			content: '\201D';
+			right: 0;
+			top: 22px;
+		}
+	}
+	.client-name {
+		color: $gray;
+		text-align: center;
+	}
+}
