@@ -3,11 +3,17 @@
   <div class="slide">
     <div class="inner">
       <div class="row">
-        <div class="columns md-one-half">
+        <div class="column md-one-half">
           <p>{{ include.intro }}</p>
+
+          <h4>The Right Tool for the Job</h4>
+          <p>Some stories are best told with animation or motion graphics, others with live action interviews or video walk-throughs. We produce both animated and live action videos, and our experience allows us to guide our client's style choices so you end up with the optimal result.</p>
         </div>
-        <div class="columns md-one-half">
-          {{ sample-video }}
+        <div class="column md-one-half right">
+          <!-- {{ include.sample-video }} -->
+          <img src="{{ site.baseurl }}/img/thumb-590-{{ page.slug }}.jpg" alt="{{ page.title }}" />
+          <br><br>
+          <a href="{{ site.baseurl }}/samples" class="button">View More Samples</a>
         </div>
     </div>
   </div>
@@ -15,14 +21,14 @@
   <div class="slide">
     <div class="inner">
       <div class="row">
-        <div class="columns md-one-half">
+        <div class="column md-one-half">
           <h2>Is a {{ page.title }} video what your organization needs?</h2>
-          <p>Give us a call at 555.555.555 or submit the form and we’ll help you find the right solution for your business.</p>
+          <p>Give us a call at 555.555.555 or submit the form and we'll help you find the right solution for your business.</p>
         </div>
-        <div class="columns md-one-half">
-          **CONTACTFORM**
+        <div class="column md-one-half">
+          {% include contact-form.html camefrom=page.slug %}
         </div>
-        </div>
+      </div>
     </div>
   </div>
 

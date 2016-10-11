@@ -37,16 +37,18 @@
 {% include header.html %}
 
 {% if page.title != "Home" %}
+{% if page.page-title or page.page-sub-title %}
 <div class="page-header">
   <div class="inner">
-    <h1>{{page.page-title}}</h1>
-    <p>{{page.page-sub-title}}</p>
+    {% if page.page-title %}<h1>{{page.page-title}}</h1>{% endif %}
+    {% if page.page-sub-title %}<p>{{page.page-sub-title}}</p>{% endif %}
     <div class="divide">&nbsp;</div>
   </div>
 </div>
 {% endif %}
+{% endif %}
 {% if page.title == "Home" %}
-{% include home-hero.html %}
+{% include home-hero.html layout="video" %}
 {% endif %}
 
 <div class="content">
@@ -57,19 +59,25 @@
 
 <div class="watermark" style="background-image: url({{ site.baseurl }}/img/lens-watermark.png);">&nbsp;</div>
 
+<div id="videoPlayerContainer" class="video-modal">
+  <button>X Close</button>
+  <iframe src="" frameborder="0" allowfullscreen></iframe>
+</div>
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{ site.baseurl }}/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
+<script src="{{ site.baseurl }}/js/vendor/jquery.vide.js"></script>
 <script src="{{ site.baseurl }}/js/main.js"></script>
 
-<!-- Google Analytics -  Random Demo Sites -->
+<!-- Google Analytics - Hire Up Video (in AltHouse Account) -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-54629411-2', 'auto');
+  ga('create', 'UA-85432406-1', 'auto');
   ga('send', 'pageview');
 
 </script>

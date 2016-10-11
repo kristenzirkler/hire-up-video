@@ -1,0 +1,29 @@
+---
+layout: default
+title: Video
+slug: sample-video
+path: ../
+
+page-title: 
+page-sub-title: 
+
+---
+
+<div class="slide">
+	<div class="inner">
+		<div class="row">
+			<div class="column md-two-thirds">
+				<div class="one-video-sample" id="oneVideoSample" style="display:none;"><iframe src="" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+			</div>
+			<div class="column md-one-third" id="oneVideoText" style="display:none;">
+				{% include video-sample-data.html layout="text-only" %}
+				<br><br>
+				<a href="{{ site.baseurl }}/samples" class="button">View More Samples</a>
+			</div>
+		</div>
+		<div class="row sample-list">
+			<div class="column"><br><br><div class="divide">&nbsp;</div><br><br><h4>Hire Up Video Production Samples</h4></div>
+			<div class="column text-columns-2">{% include video-sample-data.html layout="link-only" %}</div>
+		</div>
+	</div>
+</div>

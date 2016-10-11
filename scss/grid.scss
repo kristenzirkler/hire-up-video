@@ -6,6 +6,9 @@
   float: left;
   padding: 0 20px;
   width: 100%;
+  img {
+    max-width: 100%;
+  }
 }
 .sm-one-half {
   width: 50%;

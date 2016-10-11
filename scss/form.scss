@@ -1,0 +1,75 @@
+$field-outline-color: $gray-light;
+
+.form {
+  .field-ctr {
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+  input[type="text"] {
+    font-family: $font-family;
+    border: 1px solid $field-outline-color;
+    line-height: 50px;
+    height: 52px;
+    padding: 0 15px;
+    width: 100%;
+    font-size: 16px;
+    &:focus {
+      box-shadow: none;
+      outline: none;
+      border-color: darken($field-outline-color, 10);
+    }
+  }
+  textarea {
+    font-family: $font-family;
+    border: 1px solid $field-outline-color;
+    line-height: 1.4em;
+    height: 150px;
+    padding: 15px;
+    width: 100%;
+    font-size: 16px;
+    &:focus {
+      box-shadow: none;
+      outline: none;
+      border-color: darken($field-outline-color, 10);
+    }
+  }
+  label {
+    font-family: $font-family;
+    margin-bottom: 5px;
+    display: none;
+  }
+
+  .field-selected {
+    label {
+      //background: $main-color-highlight;
+      //border-color: $main-color-highlight;
+    }
+  }
+
+
+  .button {
+    //border: none;
+    //line-height: 50px;
+    //padding: 0 15px;
+    //display: block;
+    //width: 100%;
+    //font-size: 1em;
+  }
+  // validation
+  .parsley-error {
+    input[type="text"], textarea {
+      border-color: $error;
+    }
+    label {
+      background: $error;
+      border-color: $error;
+    }
+  }
+  .parsley-errors-list {
+    color: $error;
+
+    font-family: $accent-font;
+    text-transform: uppercase;
+    font-size: .8em;
+  }
+}

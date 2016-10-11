@@ -8,12 +8,14 @@
 @import 'site-frame';
 @import 'buttons';
 @import 'grid';
+@import 'form';
 
 @import 'slides';
 @import 'video-cats';
 @import 'home-hero';
 @import 'process';
 @import 'testimonial';
+@import 'video-modal';
 
 * {
   -webkit-box-sizing: border-box;
@@ -61,8 +63,12 @@ h3 {
   color: $main-color;
 }
 h4 {
-  font-size: 18px;
-  margin-bottom: 1em;
+  font-size: 20px;
+  color: $main-color;
+  margin: 0 0 .5em;
+}
+.right {
+  text-align: right;
 }
 
 // Responsive

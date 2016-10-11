@@ -1,7 +1,18 @@
+{% if include.layout == 'short' %}
 <div class="column md-one-third sm-one-half">
-  <a href="#" rel="play-video" data-videoid="{{ include.id }}">
-  	<img src="{{ site.baseurl }}/img/thumb-{{ include.photo }}.jpg" alt="{{ include.client-name }}" />
-		<span class="title">{{ include.client-name }}</span>
-		<span class="desc">{{ include.desc }}</span>
+  <a href="#" rel="videoPlayerToggle" data-videoid="{{ include.id }}">
+  	<img src="{{ site.baseurl }}/img/{{ include.id }}_590x332.jpg" alt="{{ include.title }}" />
+  	<span class="copy">
+		<span class="title">{{ include.title }}</span>
+		<span class="desc">{{ include.desc | truncate: 100 }}</span>
+	</span>
   </a>
 </div>
+{% elsif include.layout == 'text-only' %}
+<div id="v-{{ include.id }}">
+<h2 class="title">{{ include.title }}</h2>
+<p class="desc">{{ include.desc }}</p>
+</div>
+{% elsif include.layout == 'link-only' %}
+<div><a href="/video/?vid={{ include.id }}">{{ include.title }}</a></div>
+{% endif %}

@@ -4,7 +4,38 @@
 		background: none;
 	}
 }
-.home-hero {
+/*
+.hp-video-bg {
+    position: relative;
+    width: 100%;
+    background: $black;
+    .video-bg {
+        position: absolute;
+        top: 0; bottom: 0;
+        right: 0; left: 0;
+        opacity: .5;
+    }
+    .copy {
+        color: $white;
+        padding: $mobile-side-space*2 $mobile-side-space;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+    }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+.hp-video-bg {
 	background-color: $gray-darker;
 	height: 100vh;
 	min-height: 450px;
@@ -16,14 +47,20 @@
     position: relative;
     width: 100%;
 
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-clip: fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	overflow: hidden;
+	.video-bg {
+		position: absolute;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+		z-index: 1;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-clip: fixed;
+		background-size: cover;
+	}
 	.inner {
+		position: relative;
+		z-index: 2;
 		display: table-cell;
 		vertical-align: middle;
 		position: relative;
@@ -35,6 +72,7 @@
 		left: 0; right: 0;
 		color: $white;
 		opacity: .6;
+		z-index: 3;
 		span {
 			display: block;
 			text-transform: uppercase;
@@ -55,11 +93,6 @@
 	  font-weight: 200;
 	  margin: 0 auto;
 	}
-	h2 {
-		color: $white;
-		font-size: 20px;
-		font-weight: normal;
-	}
 }
 
 
@@ -67,7 +100,7 @@
 @media all and (min-width: 420px) {
 // Tablet & Up
 
-.home-hero {
+.hp-video-bg {
 	h1 {
 	  font-size: 40px;
 	}
