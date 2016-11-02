@@ -14,5 +14,5 @@
 <p class="desc">{{ include.desc }}</p>
 </div>
 {% elsif include.layout == 'link-only' %}
-<div><a href="/video/?vid={{ include.id }}">{{ include.title }}</a></div>
+<div><a href="{{ site.baseurl }}/video/?vid={{ include.id }}">{{ include.title }}</a></div>
 {% endif %}

@@ -7,6 +7,12 @@
 			color: $font-color;
 		}
 	}
+	.client-logo {
+		width: 200px;
+		img {
+			width: 100%;
+		}
+	}
 	.desc {
 		margin-bottom: 15px;
 	}

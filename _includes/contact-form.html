@@ -1,7 +1,7 @@
 <form action="//formspree.io/kristen@althouse.co" method="POST" class="form">
   <input type="hidden" name="_next" value="{{ site.baseurl }}/thank-you" />
   <input type="hidden" name="_subject" value="Hire Up Website Contact Form - New submission!" />
-  <input type="hidden" name="_cc" value="jason@althouse.co" />
+  
   <input type="hidden" name="CameFrom" value="{{ include.camefrom }}" />
       <ul>
         <li class="field-ctr text-field field-1">
@@ -20,6 +20,21 @@
           <label for="phone">Phone</label>
           <div class="ginput_container">
             <input name="phone" id="phone" type="text" value="" required data-parsley-error-message="Required" data-parsley-class-handler=".field-3" class="medium" tabindex="3" placeholder="Phone">
+          </div>
+        </li>
+        <li class="field-ctr">
+          <label for="phone">Interested In</label>
+          <div class="ginput_container">
+            <select name="interest" id="interest">
+              <option value="">I am interested in...</option>
+              <option value="Day in the Life">Day in the Life Videos</option>
+              <option value="Training & Onboarding">Training & Onboarding Videos</option>
+              <option value="Employment Marketing">Employment Marketing Videos</option>
+              <option value="Culture Videos">Culture Videos</option>
+              <option value="Interview Videos">Interview Videos</option>
+              <option value="Product Marketing">Product Marketing Videos</option>
+              <option value="Other">Other</option>
+            </select>
           </div>
         </li>
         <li class="field-ctr text-field-wide field-4">
