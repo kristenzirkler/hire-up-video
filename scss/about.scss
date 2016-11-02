@@ -1,0 +1,28 @@
+.bio {
+	h2 {
+		line-height: 22px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	span {
+		display: block;
+		font-size: 16px;
+		color: $black;
+	}
+	.image {
+		border-radius: $border-radius;
+		overflow: hidden;
+		margin: 0 0 20px;
+	}
+	img {
+		float: left;
+	}
+}
+.bio-callout {
+	background: $main-color;
+	text-align: center;
+	padding: 30px 0;
+	h2 {
+		color: $white;
+	}
+}
