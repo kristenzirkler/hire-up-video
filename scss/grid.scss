@@ -4,7 +4,7 @@
 }
 .column {
   float: left;
-  padding: 0 20px;
+  padding: 0 10px;
   width: 100%;
   img {
     max-width: 100%;
@@ -25,6 +25,9 @@
 .sm-one-sixth {
   width: 16.6%;
 }
+.sm-three-forths {
+  width: 75%;
+}
 
 @media only screen and (min-width: 768px) {
 
@@ -42,6 +45,9 @@
 }
 .md-one-sixth {
   width: 16.6%;
+}
+.md-three-forths {
+  width: 75%;
 }
 
 }//min-width:768px
@@ -62,6 +68,9 @@
 }
 .lg-one-forth {
   width: 25%;
+}
+.lg-three-forths {
+  width: 75%;
 }
 
 }//min-width: 950px

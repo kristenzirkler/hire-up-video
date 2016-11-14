@@ -1,7 +1,9 @@
 $slide-top-padding-desktop: 80px;
 $slide-top-padding-mobile: 30px;
 $slide-side-padding: 20px;
-
+img {
+	max-width: 100%;
+}
 .divide {
 	height: 1px;
 	background: $gray-light;

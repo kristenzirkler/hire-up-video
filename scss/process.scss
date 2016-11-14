@@ -1,4 +1,60 @@
 .process-list {
+    border-bottom: 1px solid $border-color;
+	em {
+		display: none;
+	}
+	.item {
+	    border: 1px solid $border-color;
+	    border-bottom: none;
+		.column {
+			padding: 0;
+		}
+	}
+	.image {
+		padding: 10px;
+		padding-bottom: 200px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-clip: fixed;
+		background-size: cover;
+		border-right: 2px solid $main-color;
+	}
+	h2, p {
+		color: $white;
+		background: rgba($main-color,.9);
+		padding: 20px;
+		max-width: 350px;
+	}
+	h2 {
+		padding-bottom: 0;
+	}
+	p {
+		padding-top: 10px;
+	}
+	ul {
+		padding-top: 20px;
+	}
+	li {
+		font-size: 14px;
+		line-height: 18px;
+		padding: 0 20px 20px;
+		position: relative;
+		&:before {
+			content: ' ';
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			border: 2px solid $main-color;
+			background: $white;
+			display: block;
+			position: absolute;
+			left: -6px;
+
+		}
+	}
+
+}
+.process-list-2 {
 	border-left: 3px dotted $gray-light;
 	position: relative;
 	margin-left: 35px;

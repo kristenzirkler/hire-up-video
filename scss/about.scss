@@ -19,10 +19,30 @@
 	}
 }
 .bio-callout {
-	background: $main-color;
+	background: $black;
 	text-align: center;
-	padding: 30px 0;
+	position: relative;
 	h2 {
 		color: $white;
+		z-index: 2;
+		font-size: 50px;
+		line-height: 50px;
+		text-shadow: 0 0 20px $black;
+		position: absolute;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+		margin: auto;
+		height: 50px;
+		text-align: center;
+	}
+	.column {
+		padding: 0;
+		margin-bottom: -5px;
+		overflow: hidden;
+		opacity: .7;
+		@include transition(all .3s);
+		&:hover {
+			opacity: 1;
+		}
 	}
 }
