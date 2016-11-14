@@ -1,4 +1,4 @@
-# Hire Up Video Marketing Site
+# HireUp Video Marketing Site
 ## kristenzirkler
 
 ## To Work on Site Locally
