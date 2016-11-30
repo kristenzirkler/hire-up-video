@@ -3,11 +3,12 @@
     <div class="client-logo"><img src="{{ site.baseurl }}/img/client-logo-{{ include.photo }}.png" /></div>
     <h2>{{ include.comp-name }} <span>Client Since {{ include.year }}</span></h2>
     <p class="desc">{{ include.desc }}</p>
-
+{% if include.quote %}
     <div class="client-quote">
       <p class="copy">{{ include.quote }}</p>
       <p class="client-name">- {{ include.client-name }}</p>
     </div>
+{% endif %}
   </div>
   <div class="column sm-one-half">
     <img src="{{ site.baseurl }}/img/thumb-880-{{ include.photo }}.jpg" alt="{{ include.comp-name }}" />
