@@ -61,6 +61,9 @@
 		position: absolute;
 		top: 0; left:0;
 		width: 100vw;
+		min-width: 700px;
+		margin-left: -250px;
+		@include transition(all .3s);
 		.aspect-ratio {
 			width: 100%;
 			height: auto;
@@ -83,14 +86,22 @@
 	h1 {
 	  font-size: 40px;
 	}
+	.video-bg {
+		margin-left: -50px;
+	}
 }
 
 // End Tablet & Up
 }
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 700px) {
 // Desktop & Up
 
+.hp-video-bg {
+	.video-bg {
+		margin-left: 0;
+	}
+}
 
 // End Desktop & Up
 }
