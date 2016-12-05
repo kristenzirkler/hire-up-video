@@ -1,26 +1,13 @@
 {% if include.layout == "video" %}
 <div class="hp-video-bg {{ include.layout }}">
-  <div id="video-bg" class="video-bg"
-  data-vide-bg="http://kristenzirkler.com/wp-content/uploads/2016/10/home-background-1"
-  data-vide-options="volume: 0, posterType: jpg, position: 0% 0%">
+  <div class="video-bg">
+     <img class="aspect-ratio" src="{{ site.baseurl }}/img/aspect-ratio.png" />
+     <iframe class="video-ctr" src="https://player.vimeo.com/video/194412649?background=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allowtransparency="true"></iframe>
   </div>
   <div class="inner">
     <h1>Customized video productions from an award winning team at a price you can afford.</h1>
   </div>
   <a class="scroll" href="#" rel="scrollTo" data-scrollTo="content"><span>Learn More</span><i class="fa fa-angle-double-down"></i></a>
-</div>
-
-{% elsif include.layout == "video2" %}
-<div class="home-hero video">
-  <div class="inner">
-    <h1>Customized video productions from an award winning team at a price you can afford.</h1>
-  </div>
-  <a class="scroll" href="#" rel="scrollTo" data-scrollTo="content"><span>Learn More</span><i class="fa fa-angle-double-down"></i></a>
-  <div class="background"><video id="home-video-background" autoplay loop poster="{{ site.baseurl }}/img/home-background.jpg">
-      <!--source src="{{ site.baseurl }}/img/home-background.webm" type="video/webm" /-->
-      <source src="{{ site.baseurl }}/img/home-background.mp4" type="video/mp4" />
-      <source src="{{ site.baseurl }}/img/home-background.ogv" type="video/ogv" />
-  </video></div>
 </div>
 {% else %}
 <div class="home-hero">
