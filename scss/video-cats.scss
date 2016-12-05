@@ -80,3 +80,26 @@
 		}
 	}
 }
+.video-thumbnail {
+	position: relative;
+	display: block;
+	&:before {
+		@include transition(all .3s);
+		content: '';
+		position: absolute;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+		margin: auto;
+		width: 0;
+		height: 0;
+		border-top: 30px solid transparent;
+		border-left: 50px solid rgba($white,.5);
+		border-bottom: 30px solid transparent;
+	}
+	&:hover {
+		&:before {
+			border-left-color: $white;
+
+		}
+	}
+}
