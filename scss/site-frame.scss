@@ -52,14 +52,13 @@ body {
 		.logo {
 			background-position: 0 -57px;
 		}
-		ul {
-			background: none;
-		}
 	}
 	.mobile-toggle {
+	    z-index: 10000;
+	    position: relative;
 		float: right;
 		display: inline-block;
-		margin: 5px $desktop-side-space;
+		margin: 25px 40px;
 		border-radius: 50%;
 		width: $nav-height - 30;
 		height: $nav-height - 30;
@@ -73,7 +72,6 @@ body {
 	}
 	ul {
 		clear: both;
-		display: none;
 		@include transition(all 1s);
 		background: $main-color;
 	}
@@ -81,6 +79,9 @@ body {
 		font-size: 1.1em;
 		line-height: $nav-height;
 		float: left;
+		&.home-link {
+			display: none;
+		}
 	}
 	a {
 		float: left;
@@ -163,6 +164,33 @@ body {
 }
 
 // Responsive
+@media all and (max-width: 800px) {
+// Mobile Only
+.site-navigation {
+	ul.nav {
+		display: none;
+		background-color: rgba($main-color,.9);
+		position: fixed;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+		padding-top: 40px;
+		li, a {
+			display: block;
+			float: none;
+		}
+
+	}
+	ul.nav.nav-open {
+		display: block;
+	}
+	.home-link {
+		display: block;
+	}
+
+}
+
+// 
+}
 @media all and (min-width: 420px) {
 // Tablet & Up
 
@@ -173,6 +201,11 @@ body {
 // Desktop & Up
 
 	.site-navigation {
+		&.no-bg {
+			ul {
+				background: none;
+			}
+		}
 		.mobile-toggle {
 			display: none;
 		}
@@ -196,6 +229,9 @@ body {
 			}
 			li {
 				display: inline-block;
+			}
+			.home-link {
+				display: none;
 			}
 
 		}
