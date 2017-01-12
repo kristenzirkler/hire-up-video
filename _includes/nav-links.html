@@ -1,4 +1,15 @@
-    <ul class="nav">
+{% if include.layout == "404" %}
+	<ul class="link-list">
+        <li><a href="{{ site.baseurl }}/">Home</a></li>
+        <li><a href="{{ site.baseurl }}/products">Video Products</a></li>
+        <li><a href="{{ site.baseurl }}/testimonials">Testimonials</a></li>
+        <li><a href="{{ site.baseurl }}/process">Our Process</a></li>
+        <li><a href="{{ site.baseurl }}/about">About</a></li>
+        <li><a href="{{ site.baseurl }}/samples">Samples</a></li>
+        <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
+    </ul>
+{% else %}
+	<ul class="nav">
         <li class="home-link"><a href="{{ site.baseurl }}/">Home</a></li>
         <li><a href="{{ site.baseurl }}/products">Video Products</a></li>
         <li><a href="{{ site.baseurl }}/testimonials">Testimonials</a></li>
@@ -7,3 +18,4 @@
         <li><a href="{{ site.baseurl }}/samples">Samples</a></li>
         <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
     </ul>
+{% endif %}
