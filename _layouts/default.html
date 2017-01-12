@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>{% if page.meta-title %}{{ page.meta-title }} | {% elsif page.title %}{{ page.title }} | {% endif %}HireUp Video</title>
+<title>{% if page.meta-title %}{{ page.meta-title }}{% elsif page.title %}{{ page.title }} | HireUp Video{% endif %}</title>
 {% if page.meta-description %}<meta name="description" content="{{ page.meta-description }}">{% endif %}
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
