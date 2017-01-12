@@ -1,7 +1,7 @@
 highlighter: rouge
 github: [Repository metadata]
 
-baseurl: "http://kristenzirkler.github.io/hire-up-video"
+baseurl: "http://www.hireupvideo.com"
 
 # Sass
 sass:
