@@ -10,4 +10,6 @@ sass:
   line_numbers: true
 
 # Gems
-gems: ['jekyll-redirect-from']
+gems: 
+  - jekyll-redirect-from
+  - jekyll-sitemap
